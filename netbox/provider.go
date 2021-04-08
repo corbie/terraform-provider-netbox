@@ -38,7 +38,7 @@ func Provider() *schema.Provider {
 				Type:        schema.TypeString,
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("NETBOX_SCHEME", "https"),
-				Description: "Sheme used to reach netbox application.",
+				Description: "Scheme used to reach netbox application.",
 			},
 		},
 		DataSourcesMap: map[string]*schema.Resource{
