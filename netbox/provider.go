@@ -122,6 +122,7 @@ func Provider() *schema.Provider {
 			"netbox_virtualization_cluster":                       dataNetboxVirtualizationCluster(),
 		},
 		ResourcesMap: map[string]*schema.Resource{
+			"netbox_dcim_device":              resourceNetboxDcimDevice(),
 			"netbox_dcim_rack":                resourceNetboxDcimRack(),
 			"netbox_dcim_site":                resourceNetboxDcimSite(),
 			"netbox_ipam_aggregate":           resourceNetboxIpamAggregate(),
