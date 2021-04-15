@@ -124,6 +124,7 @@ func Provider() *schema.Provider {
 		ResourcesMap: map[string]*schema.Resource{
 			"netbox_dcim_cable":               resourceNetboxDcimCable(),
 			"netbox_dcim_device":              resourceNetboxDcimDevice(),
+			"netbox_dcim_interface":           resourceNetboxDcimInterface(),
 			"netbox_dcim_rack":                resourceNetboxDcimRack(),
 			"netbox_dcim_site":                resourceNetboxDcimSite(),
 			"netbox_ipam_aggregate":           resourceNetboxIpamAggregate(),
