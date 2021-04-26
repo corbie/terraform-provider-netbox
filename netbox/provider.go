@@ -135,6 +135,7 @@ func Provider() *schema.Provider {
 			"netbox_ipam_vlan_group":          resourceNetboxIpamVlanGroup(),
 			"netbox_tenancy_tenant":           resourceNetboxTenancyTenant(),
 			"netbox_tenancy_tenant_group":     resourceNetboxTenancyTenantGroup(),
+			"netbox_virtualization_cluster":   resourceNetboxVirtualizationCluster(),
 			"netbox_virtualization_interface": resourceNetboxVirtualizationInterface(),
 			"netbox_virtualization_vm":        resourceNetboxVirtualizationVM(),
 		},
