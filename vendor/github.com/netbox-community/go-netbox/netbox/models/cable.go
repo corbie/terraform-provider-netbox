@@ -64,7 +64,7 @@ type Cable struct {
 
 	// Termination a
 	// Read Only: true
-	Terminationa map[string]string `json:"termination_a,omitempty"`
+	Terminationa map[string]interface{} `json:"termination_a,omitempty"`
 
 	// Termination a id
 	// Required: true
@@ -78,7 +78,7 @@ type Cable struct {
 
 	// Termination b
 	// Read Only: true
-	Terminationb map[string]string `json:"termination_b,omitempty"`
+	Terminationb map[string]interface{} `json:"termination_b,omitempty"`
 
 	// Termination b id
 	// Required: true
