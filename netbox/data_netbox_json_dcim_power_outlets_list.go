@@ -20,13 +20,18 @@ func dataNetboxJSONDcimPowerOutletsList() *schema.Resource {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
+			"site": {
+				Type:     schema.TypeString,
+				Optional: true,
+			},
 		},
 	}
 }
 
 func dataNetboxJSONDcimPowerOutletsListRead(d *schema.ResourceData, m interface{}) error {
 	client := m.(*netboxclient.NetBoxAPI)
-	params := dcim.NewDcimPowerOutletsListParams()
+	site := d.Get("site").(string)
+	params := dcim.NewDcimPowerOutletsListParams().WithSite(&site)
 	acc := []*models.PowerOutlet{}
 	var offset int64
 

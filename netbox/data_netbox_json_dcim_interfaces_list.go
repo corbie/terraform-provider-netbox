@@ -20,13 +20,18 @@ func dataNetboxJSONDcimInterfacesList() *schema.Resource {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
+			"site": {
+				Type:     schema.TypeString,
+				Optional: true,
+			},
 		},
 	}
 }
 
 func dataNetboxJSONDcimInterfacesListRead(d *schema.ResourceData, m interface{}) error {
 	client := m.(*netboxclient.NetBoxAPI)
-	params := dcim.NewDcimInterfacesListParams()
+	site := d.Get("site").(string)
+	params := dcim.NewDcimInterfacesListParams().WithSite(&site)
 	acc := []*models.Interface{}
 	var offset int64
 
